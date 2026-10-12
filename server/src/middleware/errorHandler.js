@@ -48,7 +48,9 @@ function normalise(err) {
   if (err?.name === 'JsonWebTokenError' || err?.name === 'NotBeforeError') {
     return ApiError.unauthorized('Invalid authentication token');
   }
-  if (err?.type === 'entity.parse.failed') {
+  // express.json() locally; on Vercel the platform parses the body first and
+  // throws its own 400 "Invalid JSON" error.
+  if (err?.type === 'entity.parse.failed' || (err?.statusCode === 400 && /json/i.test(err.message))) {
     return ApiError.badRequest('Malformed JSON body');
   }
   if (err?.type === 'entity.too.large') {
