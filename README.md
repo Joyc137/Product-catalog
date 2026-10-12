@@ -6,10 +6,10 @@ A focused slice of an e-commerce backend and storefront: browse, search, filter 
 
 | | |
 |---|---|
-| Live app | _add URL after deploy_ |
-| API | _add URL after deploy_ |
-| Demo admin | `admin@example.com` / _set via seed env_ |
-| Demo user | `user@example.com` / _set via seed env_ |
+| Live app | https://product-catalog-orcin-five.vercel.app |
+| API | https://product-catalog-api-blue.vercel.app/api (e.g. [`/products`](https://product-catalog-api-blue.vercel.app/api/products), [`/health`](https://product-catalog-api-blue.vercel.app/api/health)) |
+| Demo admin | `admin@example.com`. Password shared with reviewers privately (the repo is public). |
+| Demo user | `user@example.com`, or register a new account on the live site |
 
 ---
 
